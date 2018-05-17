@@ -3,6 +3,10 @@
 主要包括两类moudle：
 Android项目demo --- mvvm，kotlin-mvvm等
 Android项目基础工具 --- baselibs
+
+后续从1.0.2开始区分：精简版和完整版
+dev-base：精简版，只包括baselibs工具库
+dev-aall：完整版，包含baselibs工具库和其他demo
 ```
 
 # github地址
