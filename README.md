@@ -3,6 +3,10 @@
 主要包括两类moudle：
 Android项目demo --- mvvm，kotlin-mvvm等
 Android项目基础工具 --- baselibs
+
+后续从1.0.3开始区分：精简版和完整版
+dev-base：精简版，只包括baselibs工具库
+dev-aall：完整版，包含baselibs工具库和其他demo
 ```
 
 # github地址
@@ -33,7 +37,7 @@ doc
 ### 	}
 ## Step 2. Add the dependency
 ### 	dependencies {
-### 	        compile 'com.github.fanson1:FhyProject:1.0.0'
+### 	        compile 'com.github.fanson1:FhyProject:1.0.3-base'
 ### 	}
 ## 其他方式参照：
 https://jitpack.io/#fanson1/FhyProject/
