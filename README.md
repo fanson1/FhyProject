@@ -37,7 +37,7 @@ doc
 ### 	}
 ## Step 2. Add the dependency
 ### 	dependencies {
-### 	        compile 'com.github.fanson1:FhyProject:1.0.0'
+### 	        compile 'com.github.fanson1:FhyProject:1.0.3-base'
 ### 	}
 ## 其他方式参照：
 https://jitpack.io/#fanson1/FhyProject/
