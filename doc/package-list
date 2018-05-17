@@ -2,9 +2,11 @@ com.base
 com.base.adapter
 com.base.application
 com.base.bean
+com.base.demo
 com.base.mvvm
 com.base.mvvm.adapter
 com.base.mvvm.app
+com.base.mvvm.async
 com.base.mvvm.bean
 com.base.mvvm.feature.login
 com.base.mvvm.feature.main
@@ -20,6 +22,7 @@ com.base.util.app
 com.base.util.bezier
 com.base.util.bitmap
 com.base.util.common
+com.base.util.dialog
 com.base.util.hint
 com.base.util.img
 com.base.util.layoutmanager
