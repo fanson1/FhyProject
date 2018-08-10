@@ -1,0 +1,269 @@
+﻿@CHARSET "UTF-8";
+
+/*重构新form CSS 列*/
+
+/*
+* 表单 css样式
+*该样式用于 表单样式调整 涉及input button select textarea label 等表单元素
+*主要涉及调整表单input输入框的边框颜色 宽 高
+*主要涉及调整表单button 颜色 宽 高
+*其中按钮为两类,button 或 a (示例demo/html/form.html)
+*该样式用于银犁食品B2C网站  主以sp-xx-yy名
+*该样式可添加不可修改
+*/
+
+/*
+ *  表单重置
+*/
+input, select, textarea {
+    outline: 0;
+}
+textarea {
+    resize: none;
+    overflow: auto;
+}
+select, input, button, button img, label {
+    vertical-align: middle;
+    border: none;
+    font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
+}
+input[type="checkbox"] {
+    vertical-align: middle;
+    padding: 0;
+}
+button{
+    outline: none;
+}
+label{
+    display: inline-block;
+}
+textarea::-webkit-input-placeholder { 
+	font-size:12px;
+	color: #999;
+} 
+textarea::-moz-placeholder {
+	font-size:12px;
+	color: #999;
+} 
+textarea:-ms-input-placeholder {
+	font-size:12px;
+	color: #999;
+}
+
+/*
+* 输入框类
+*/
+/*38高系列输入框*/
+.sp-input-lg{
+    border: 1px solid #ddd;
+    height: 36px;
+    line-height: 38px;
+    padding: 0 8px;
+}
+/*360宽*/
+.sp-lg-widthLg{
+    width: 342px;
+}
+/*200宽*/
+.sp-lg-widthMd{
+    width: 182px;
+}
+/*30高系列输入框*/
+.sp-input-md{
+    border: 1px solid #ddd;
+    height: 28px;
+    line-height: 30px;
+    padding: 0 8px;
+}
+/*250宽*/
+.sp-md-widthSm{
+    width: 232px;
+}
+/*367宽*/
+.sp-md-widthMd{
+    width: 349px;
+}
+/*450宽*/
+.sp-md-widthLg{
+    width: 432px;
+}
+
+/*input 错误提示类*/
+.error-color{
+    border-color: #ff0000;
+}
+
+/*label样式*/
+/*加背景label样式  40*38 规模*/
+.sp-label-lg{
+    display: block;
+    width: 40px;
+    height: 38px;
+    background-color: #ddd;
+    position: absolute;
+    z-index: 10000;
+}
+/*无背景label样式 */
+.sp-label-md{
+    width: 76px;
+}
+.sp-label-sm{
+    width: 84px;
+}
+.sp-label-xl{
+    width: 84px;
+}
+.sp-label-sl{
+    width: 80px;
+}
+.sp-evaluate-md{
+	width:90px;
+}
+
+/****按钮*****/
+.sp-btn{
+    display: inline-block;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 12px;
+    color: #fff;
+    padding: 0 20px;
+    cursor: pointer;
+    background: none;
+    transition: background 0.2s ease-out;
+    -webkit-transition: background 0.2s ease-out;
+    -moz-transition: background 0.2s ease-out;
+    -o-transition: background 0.2s ease-out;
+}
+.sp-btns{
+    height: 30px;
+    line-height: 28px;
+}
+.sp-btn-green{
+    background: #efffdb;
+    border-color: #7bbe2b;
+    color: #7bbe2b;
+}
+.sp-btn-green:hover{
+    background: #7bbe2b;
+    color: #fff;
+}
+.sp-btn-greens{
+    border-radius: 4px;
+    background: #7bbe2b;
+    border-color: #7bbe2b;
+    color: #fff;
+}
+.sp-btn-greens:hover{
+    background: #69a324;
+    border-color: #69a324;
+}
+.sp-btn-orange{
+    border-color: #ffc000;
+    color: #ffc000;
+}
+.sp-btn-orange:hover{
+    background: #ffc000;
+    color: #fff;
+}
+.sp-btn-oranges{
+    border-color: #ffc000;
+    background: #ffc000;
+    color: #fff;
+}
+.sp-btn-oranges:hover{
+    background: #e2af13;
+    border-color: #e2af13;
+}
+.sp-btn-radius{
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+.sp-btn-grey{
+    background: #ddd;
+    color: #999;
+}
+.sp-btn-login{
+    padding: 0;
+    width: 360px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 0;
+    border-radius: 0;
+}
+.sp-btn-code{
+    padding: 0;
+    border: 0;
+    width: 153px;
+    height: 38px;
+    line-height: 38px;
+    font-size: 14px;
+}
+.sp-btn-pay{
+    padding: 0;
+    width: 118px;
+}
+/*商品详情页特殊按钮*/
+.sp-detail-btn{
+    height: 50px;
+    line-height: 48px;
+    width: 154px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0;
+}
+
+.sp-btn-radius-right{
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    -moz-border-bottom-right-radius: 4px;
+    -ms-border-bottom-right-radius: 4px;
+    -o-border-bottom-right-radius: 4px;
+    -moz-border-top-right-radius: 4px;
+    -ms-border-top-right-radius: 4px;
+    -o-border-top-right-radius: 4px;
+}
+/*列表toolbar*/
+.toolbar_btns{
+    width: 64px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+/*单选框、 复选框公共样式*/
+.sp-fa-box{
+    float: left;
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+}
+.sp-fa-box label{
+    cursor: pointer;
+}
+.sp-fa-box input{
+    position: absolute;
+    left: 0;
+    top: 11px;
+}
+.sp-fa-box span{
+    font-size: 14px;
+    padding-left: 20px;
+}
+/*复选框样式*/
+.normal-checkbox{
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border: none;
+    background: rgba(242, 242, 242, 0);
+    z-index: 0;
+}

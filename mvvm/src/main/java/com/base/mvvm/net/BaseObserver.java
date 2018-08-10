@@ -37,12 +37,12 @@ public abstract class BaseObserver<T> implements Observer {
 
     @Override
     public void onError(Throwable e) {
-        DialogUtil.getInstance().dismissDialog();
+//        DialogUtil.getInstance().dismissDialog();
     }
 
     @Override
     public void onComplete() {
-        DialogUtil.getInstance().dismissDialog();
+//        DialogUtil.getInstance().dismissDialog();
     }
 
     public abstract void callBack(T t);

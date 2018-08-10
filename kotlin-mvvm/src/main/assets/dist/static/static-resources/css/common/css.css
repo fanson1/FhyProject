@@ -1,0 +1,361 @@
+﻿@CHARSET "UTF-8";
+
+/*
+* 公用 css样式
+*该样式用于 大部分页面标签自带样式的重置以及多页面通用样式
+*主要涉及调整 字体颜色 字体大小 字体加粗 图标通用样式 边框阴影 鼠标手势 隐藏
+*该样式用于银犁食品B2C网站  主以sp-xx-yy名
+*该样式可添加多页面通用css 不可修改
+*/
+
+/*-------  CSS Reset_start  重置开始  ---------*/
+html, body, h1, h2, h3, h4, h5, h6, div, p, dl, dt, dd, ol, ul, li,
+table, th, td, tr, caption,header, footer, section, aside, nav, figure, figcaption,
+a, img, span, strong, var, em, small, i, sub, sup,
+form, input, textarea, select, option, iframe, pre {
+    margin: 0;
+    padding: 0;
+}
+
+html,body {
+    /*font: 12px/150% "Microsoft Yahei", Arial, Helvetica, sans-serif;*/
+    color: #666;
+}
+
+
+a,img, a img {
+    border: none;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+
+th, strong, var, em, i, small {
+    font-weight: normal;
+    font-style: normal;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+em, i, u {
+    font-style: normal;
+}
+.clear-padding{
+    padding: 0 !important;
+}
+.normal-padding{
+    padding: 10px;
+}
+.big-padding{
+    padding: 20px;
+}
+.md-padding{
+    padding: 5px;
+}
+.modal-padding{
+    padding:10px 40px;
+}
+.up-md-padding{
+    padding-top: 5px;
+}
+.left-nor-padding{
+    padding-left: 10px;
+}
+/*-------  CSS Reset_End  重置结束  ---------*/
+
+/*   HTML5标签 块级化    */
+header, footer, section, aside, nav, figure, figcaption {
+    display: block;
+    border: none;
+}
+
+/*谷歌自带表单默认样式重置*/
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+    background-color: rgb(0, 0, 0) !important;
+    background-image: none !important;
+    color: rgb(0, 0, 0) !important;
+    -webkit-tap-highlight-color:rgba(0,0,0,0) !important;
+}
+
+/*/*超出部分隐藏*/
+.sp-hide{
+    display: none;
+}
+.sp-hidden{
+    overflow: hidden;
+}
+
+/*边框样式*/
+.sp-border{
+    border:1px solid #ddd;
+}
+.sp-border-gray{
+    border:1px solid #ddd;
+}
+.sp-border-orange{
+    border: 2px solid #fFC000;
+}
+.sp-border-orange-sm{
+    border: 1px solid #fFC000;
+}
+.sp-light-border{
+    border: 1px solid #F2F2F2;
+}
+.sp-border-green{
+    border: 1px solid #80bc29;
+}
+.sp-border-none{
+    border: none !important;
+}
+.sp-border-right{
+	border-right: 1px solid #ddd;
+}
+.sp-border-bottom{
+	border-bottom: 1px solid #ddd;
+}
+/*针对下边框*/
+.sp-border-bottom-have{
+    border-bottom: 1px solid #ddd;
+}
+/*阴影*/
+.sp-box-shadow{
+    box-shadow: 0 5px 20px #ddd;
+    -moz-box-shadow: 0 5px 20px #ddd;/* for firefox */
+    -webkit-box-shadow: 0 5px 20px #ddd;/* for safari or chrome */
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#ddd,direction=180,strength=20);  /* For IE 5.5 - 7 */
+    -ms-filter:progid:DXImageTransform.Microsoft.Shadow(Strength=20, Direction=180, Color='#ddd');  /* For IE 8 */
+}
+.sp-box-shadow-2{
+    -webkit-box-shadow:0 0 3px #EAEAEA;
+    -moz-box-shadow:0 0 3px #EAEAEA;
+    box-shadow:0 0 3px #EAEAEA;
+}
+.sp-box-shadow-3{
+    -webkit-box-shadow:0 0 3px #EAEAEA;
+    -moz-box-shadow:0 0 3px #EAEAEA;
+    box-shadow:0 0 3px #EAEAEA;
+}
+
+/*字体颜色样式*/
+.sp-color-green{
+    color: #7bbe2b;
+}
+.sp-color-orange{
+    color: #ffc000;
+}
+.sp-color-gray{
+    color: #ddd;
+}
+.sp-color-red{
+    color: #ff4e00;
+}
+.sp-color-tint-black{
+    color:#333;
+}
+.sp-red-price{
+    color:red;
+}
+.sp-color-grayred{
+    color:#ffbebe;
+}
+/*浅灰色文字*/
+.sp-color-french-grey{
+    color: #c0c0c0;
+}
+.sp-color-tint-gray{
+    color: #999;
+}
+.sp-color-deep-gray{
+    color: #666;
+}
+/*白色文字*/
+.sp-color-french-white{
+    color: white;
+}
+/*字体大小*/
+.sp-font-normal{
+    font-size: 12px;
+}
+.sp-font-md{
+    font-size: 14px;
+}
+.sp-font-xl{
+    font-size: 16px;
+}
+.sp-font-lg{
+    font-size: 18px;
+}
+.sp-font-mg{
+    font-size: 20px;
+}
+.sp-font-weight{
+    font-weight: bold;
+}
+
+/*组合文字*/
+.sp-lg-text{
+    font-size: 18px;
+    font-weight: bold;
+}
+.sp-md-text{
+    font-size: 16px;
+    font-weight: bold;
+}
+.sp-xm-text{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/*span分割线*/
+span.spacer{
+    color: #ddd;
+    padding: 0 2px;
+}
+
+/*鼠标手势*/
+.sp-cursor{
+    cursor: pointer;
+}
+
+/*图标样式*/
+.sp-icon{
+    position: absolute;
+    display: block;
+    background: url("../../image/common/icon_img.png") no-repeat;
+    width: 20px;
+    height: 20px;
+}
+.sp-icon-other{
+    position: absolute;
+    display: block;
+    background: url("../../image/common/icon_bigimg.png") no-repeat;
+}
+/*小图标 12*12 */
+.sp-icon-sm{
+    width: 12px;
+    height: 12px;
+}
+/*进度步骤*/
+.sp-progress::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+/*图标*/
+.sp-step-icon{
+    width: 100px;
+    height: 22px;
+    display: block;
+    float: left;
+    line-height: 22px;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    position: relative;
+    background: url("../../image/common/icon_bigimg.png") no-repeat;
+}
+.step_1_start{
+    background-position: -25px -25px;
+}
+.step_1_end {
+    background-position: -25px -50px;
+}
+.step_2_start{
+    background-position: -125px -25px;
+}
+.step_2_end{
+    background-position: -125px -50px;
+}
+.step_3_start{
+    background-position: -225px -25px;
+}
+.step_3_end{
+    background-position: -225px -50px;
+}
+/*文字*/
+.step_text{
+    display: block;
+    position: absolute;
+    color: #7bbe2b;
+    top: 26px;
+    width: 100px;
+    height: 22px;
+    left: 0;
+}
+.text_start{
+    color: #daf7b7;
+}
+/*黄色确认小勾图标*/
+.icon-confirm{
+    background-position: -210px -180px;
+    width: 13px;
+    height: 13px;
+    right: 0;
+    bottom: 0;
+}
+
+/*绿色大型确认勾 图标*/
+.sp-confirm-green{
+    background-position: -225px -75px;
+    width: 60px;
+    height: 58px;
+}
+/*地址列表图标*/
+.icon-m-user{
+    left: 12px;
+    top: 8px;
+    background-position: -480px -30px;
+}
+.icon-m-addr{
+    background-position: -420px -60px;
+    left: 12px;
+    top: 12px;
+}
+.icon-m-tel{
+    background-position: -390px 0;
+    left: 12px;
+    top: 12px;
+}
+
+/*地图定位图标*/
+.icon-position{
+    background-position:-60px -180px;
+    width: 20px;
+    height: 24px;
+    left: 5px;
+    color: white;
+    line-height: 24px;
+    font-size: 14px;
+    text-align: center;
+}
+/*菜单售后切换图标样式*/
+.icon-switch{
+    width: 11px;
+    height: 9px;
+    left: 10px;
+    top: 16px;
+    background-position: -60px -150px;
+}
+.icon-less{
+    width: 11px;
+    height: 9px;
+    left: 10px;
+    top: 15px;
+    background-position: -30px -150px;
+}
+
+/*文本溢出*/
+.text-over-line-height{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+/*弹出无货背景颜色*/
+.modal_color_bg{
+    background: #fffdf6;
+}

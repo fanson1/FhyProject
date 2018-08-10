@@ -57,6 +57,8 @@ okHttpClient，Retrofit，ApiService初始化
 主要处理Activity的视图数据初始化流程，键盘显示隐藏，沉浸式状态栏及Activity统一的栈管理
 ### 2.BaseFragment：
 主要处理Fragment的视图数据初始化流程，点击事件绑定
+### 3.MVVM：
+主要是MVVM框架基类封装
 ## 五、util：工具类封装
 ### 1.app：
 应用管理，界面跳转等

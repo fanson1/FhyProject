@@ -4,8 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BaseProject.iml" filepath="$PROJECT_DIR$/BaseProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/baselibs/baselibs.iml" filepath="$PROJECT_DIR$/baselibs/baselibs.iml" />
-      <module fileurl="file://$PROJECT_DIR$/kotlin-mvvm/kotlindemo.iml" filepath="$PROJECT_DIR$/kotlin-mvvm/kotlindemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kotlin-mvvm/kotlin-mvvm.iml" filepath="$PROJECT_DIR$/kotlin-mvvm/kotlin-mvvm.iml" />
       <module fileurl="file://$PROJECT_DIR$/mvvm/mvvm.iml" filepath="$PROJECT_DIR$/mvvm/mvvm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/textviewdemo/textviewdemo.iml" filepath="$PROJECT_DIR$/textviewdemo/textviewdemo.iml" />
     </modules>
   </component>
 </project>

@@ -43,4 +43,5 @@ dependencies {
     androidTestCompile(rootProject.ext.dependencies["espresso"], {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    compile rootProject.ext.dependencies["constraint"]
 }

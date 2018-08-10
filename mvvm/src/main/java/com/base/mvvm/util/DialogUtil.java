@@ -64,7 +64,7 @@ public class DialogUtil {
         if (msg != null && !msg.equals("")) {
             tvLoadingMsg.setText(msg);
         }
-        aviLoading.setIndicator("BallSpinFadeLoaderIndicator");
+        aviLoading.setIndicator("com.base.mvvm.util.MyBallPulseSyncIndicator");
         pd = new CustomDialog(activity, R.style.CustomDialog);
         aviLoading.show();
         pd.show();

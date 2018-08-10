@@ -1,6 +1,9 @@
 package com.base.demo.test
 
 import android.util.Log
+import java.util.concurrent.locks.Lock
+import java.util.concurrent.locks.ReentrantLock
+import kotlin.concurrent.thread
 
 /**
  * 描述: Kotlin基本语法练习
@@ -382,5 +385,69 @@ class Test {
         for ((index, value) in array.withIndex()) {
             Log.d("fanhy", "index is $index, value is $value")
         }
+    }
+
+    /**
+     *
+     * 告别Java的函数重载啦~~~~~~
+     */
+    fun testOverload(content: String, isShow: Boolean = true) {
+        if (isShow) {
+            Log.d("fanhy", content)
+        }
+    }
+
+    fun testThread() {
+        thread {
+            Log.d("fanhy", "线程1 id：${Thread.currentThread().id}")
+        }
+
+        thread(false) {
+            Log.d("fanhy", "线程2 id：${Thread.currentThread().id}")
+        }.start()
+
+    }
+
+    /**
+     *
+     * 测试Kotlin同步锁
+     */
+    fun testLock() {
+        var lock: Lock = ReentrantLock()
+
+        var result1 = lock(lock) {testThread()}
+
+        var result2 = lock(lock, {testThread()})
+
+        fun funParams() = testThread()
+        var result3 = lock(lock, ::funParams)
+    }
+
+    /**
+     *
+     * 加同步锁
+     */
+    fun <T> lock(lock: Lock, body: () -> T ) : T {
+        lock.lock()
+        try {
+            return body()
+        }
+        finally {
+            lock.unlock()
+        }
+    }
+
+    fun testMap() {
+        val list = listOf("zhangsanfeng", "xiaoyaowang", "yinsusu", "zhangcuishan", "zhangwuji")
+        list
+                .filter { it.startsWith("zhang") }      // 过滤
+                .sortedBy { it }    // 排序
+                .map { it.replace(it[0], it[0].toUpperCase()) }     // 转换
+                .forEach { Log.d("fanhy", it) }     // 遍历
+    }
+
+    val name: String by lazy {
+        Log.d("fanhy", "executed only first time")
+        "Double Thunder"
     }
 }

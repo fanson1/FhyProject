@@ -1,0 +1,88 @@
+@CHARSET "UTF-8";
+
+/*
+* tab切换 css样式
+*该样式用于 tab布局
+*主要涉及 tab 宽 高 调整 及默认选中颜色 字体设置
+*该样式用于银犁食品B2C网站  主以sp-xx-yy名
+*该样式可添加通用tab框架css 不可修改
+*/
+
+.sp-tab{
+    height: 48px;
+    border: 1px solid #ddd;
+    width: calc(100% - 2px);
+    width: -moz-calc(100% - 2px);
+    width: -webkit-calc(100% - 2px);
+    line-height: 50px;
+    background: white;
+}
+.sp-tab::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.sp-tab-ul{
+    margin-top: -2px;
+}
+.sp-tab-ul li{
+    float: left;
+    width: 118px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    text-align: center;
+}
+/*按钮*/
+.sp-tab-btn{
+    width: 100px;
+    height: 48px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+/*默认选中样式*/
+.sp-tab-default{
+    background: #fFC000;
+}
+.sp-tab-default a{
+    color: white;
+}
+
+/*tab导航固定样式(商品详情)*/
+.sp-fixed{
+    position: fixed;
+    top: 0;
+    width: 950px;
+}
+
+/*****我的订单tab*****/
+.sp-order-tab li{
+	float: left;
+	display: inline-block;
+	height: 28px;
+	line-height: 28px;
+	margin-right: 30px;
+	position: relative;
+}
+.sp-order-tab li a{
+	display: block;
+}
+.sp-order-tab li.default, .sp-order-tab li:hover{
+	border-bottom: 2px solid #7bbe2b;
+}
+.sp-order-tab li.default a, .sp-order-tab li:hover a{
+	color: #7bbe2b;
+}
+.sp-order-tab li i{
+	position: absolute;
+	top: 0;
+	right: -15px;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	line-height: 16px;
+	text-align: center;
+	color: #fff;
+	background: #7bbe2b;
+	border-radius: 100%;
+}

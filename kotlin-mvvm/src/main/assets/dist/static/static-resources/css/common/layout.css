@@ -1,0 +1,443 @@
+﻿@CHARSET "UTF-8";
+
+/*
+* 页面布局 css样式
+*该样式用于 主体框架布局样式 首页/商品详情页/商品列表页 1200宽布局   其他用户类1000宽布局
+*商品详情页/商品列表页及涉及支付类页面无背景色   其他页面添加背景色
+*主要涉及 搭建主体框架结构
+*该样式用于银犁食品B2C网站  主以sp-xx-yy名
+*该样式可添加多页面通用框架css 不可修改
+*/
+
+/*
+整体页面布局样式
+*/
+
+/* float 浮动 */
+.sp-left {
+    float: left;
+}
+.sp-right {
+    float: right;
+}
+.sp-clearfix{
+    clear: both;
+}
+.sp-clear::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*防止溢出*/
+.sp-overflow{
+    overflow: hidden;
+}
+
+/*定位*/
+.sp-position{
+    position: relative;
+}
+.sp-position-abs{
+    position: absolute;
+}
+.sp-center{
+    text-align: center;
+}
+.text-center{
+    text-align: center;
+}
+.sp-text-right{
+    text-align: right;
+}
+.sp-text-left{
+    text-align: left;
+}
+
+/*块级元素 转行级元素 可设置宽高 */
+.sp-inline-block{
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+.sp-block{
+    display: block;
+}
+/*主体结构样式*/
+.sp-wrap{
+    width: 1200px;
+    margin: 0 auto;
+}
+.sp-wrap-narrow{
+    width: 1000px;
+    margin: 0 auto;
+}
+.sp-wrap-width{
+    min-width: 1200px;
+}
+.sp-wrap-narrow-width{
+    min-width: 1000px;
+}
+/*个人中心背景颜色设置*/
+.sp-wrap-bg{
+    background: #fafafa;
+    padding: 20px 0 70px;
+}
+
+/*浅黄 背景颜色*/
+.sp-content-bg{
+    background: #fffbef;
+}
+.sp-gary-bg{
+    background: #fffbef;
+}
+/*主色调背景*/
+.sp-main-green{
+    background: #7bbe2b;
+    color: #fff;
+}
+.sp-main-orange{
+    background: #ffc000;
+    color: #fff;
+}
+
+/*白色 背景颜色*/
+.sp-white-bg{
+    background: white;
+}
+.sp-content-padding{
+    padding: 20px 10px;
+    margin: 0 auto;
+}
+.sp-xs-padding{
+    padding: 5px 5px;
+    margin: 0 auto;
+}
+/*首页主体布局*/
+/*轮播区*/
+.sp-ly-carousel{
+    width: 100%;
+    height: 364px;
+    overflow: hidden;
+}
+/*当季精选区*/
+.sp-ly-chosen{
+    margin: 40px 0;
+}
+/*商品品类介绍区*/
+.sp-ly-kinds{
+    margin-bottom: 40px;
+}
+.sp-ly-kind-title{
+    padding-left: 50px;
+}
+
+/*商品列表/商品详情页*/
+
+/*面包屑区*/
+.sp-ly-crumbs{
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    color: #666;
+}
+.sp-ly-crumbs>i{
+    background: url("../../image/common/icon_img.png") no-repeat -90px -150px;
+    display: inline-block;
+    width: 5px;
+    height: 9px;
+    margin: 0 5px;
+}
+/*
+  个人中心页面布局样式
+ */
+
+/*个人中心左侧菜单栏*/
+.sp-ly-nav{
+    width: 128px;
+    border-top: 4px solid #7bbe2b;
+    min-height: 200px;
+    font-size: 14px;
+    background: white;
+    padding-bottom: 20px;
+}
+.cur-ly-nav{
+    width: 128px;
+    border-top: 4px solid #7bbe2b;
+    min-height: 200px;
+    font-size: 14px;
+    background: white;
+}
+.sp-ly-list{
+    padding: 0 10px;
+}
+.sp-ly-list>li{
+    padding: 10px 0 10px 30px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+.sp-ly-list>li:last-child{
+    border-bottom: none;
+}
+.sp-ly-list>.sp-ly-other{
+    border: none;
+    padding: 10px 0;
+    position: relative;
+    cursor: pointer;
+}
+.sp-ly-list>.sp-ly-other li{
+    font-size: 12px;
+    padding-left: 30px;
+    height: 30px;
+    line-height: 30px;
+}
+.sp-ly-list>.sp-ly-other li>a{
+    color: #666;
+}
+.sp-ly-left{
+    padding-left: 30px;
+}
+.sp-list-service{
+    display: none;
+}
+/*导航鼠标移动事件*/
+.sp-ly-list .sp-ly-default a{
+    color: #7bbe2b;
+}
+.sp-ly-list a:hover{
+    color: #7bbe2b;
+}
+.sp-ly-nav .sp-ly-list a:hover{
+    color: #7bbe2b;
+}
+.sp-list-service li.sp-ly-default a{
+    color: #7bbe2b;
+}
+
+/*菜单导航结束*/
+
+/*用户界面右侧主体布局*/
+.sp-ly-center
+{
+    width: 862px;
+    /*background: white;*/
+}
+/*主体标题样式*/
+.sp-ly-title{
+    border-left: 4px solid #7bbe2b;
+    border-bottom: 1px solid #ddd;
+    padding-left: 10px;
+    height: 30px;
+    font-size: 14px;
+    color: #666;
+    line-height: 30px;
+    background: white;
+}
+
+/*==================新增收货地址公共样式===================*/
+/*新增样式*/
+.sp-addrss-form{
+    background: white;
+    padding: 10px;
+}
+.sp-item-margin-bottom{
+    margin-bottom: 20px;
+}
+.sp-p-width{
+    width: 300px;
+}
+/*地图样式*/
+.sp-map{
+    display: inline-block;
+    width: 646px;
+    height: 340px;
+}
+/*三级联动城市样式*/
+.sp-city-down{
+    position: relative;
+    vertical-align: middle;
+    height: 30px;
+}
+.sp-margin-left{
+    margin-left: 10px;
+}
+/*自提点样式*/
+.sp-pick-up-station{
+    width: 188px;
+    height: 341px;
+    overflow-y: auto;
+    border-top: 1px solid #7bbe2b;
+    vertical-align: top;
+}
+.sp-pick-up-station li{
+    height: 88px;
+    cursor: pointer;
+}
+.sp-smul-list h4{
+    padding: 10px 0;
+    position: relative;
+}
+.sp-smul-list h4,.sp-smul-list p{
+    padding-left: 34px;
+}
+.sp-smul-list p{
+    width: 140px;
+    line-height: 20px;
+    font-size: 12px;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.sp-station-map{
+    line-height: 20px;
+}
+/*自提点鼠标事件样式*/
+.sp-smul-list li:hover, .sp-smul-list>li.visited{
+    background: #f2ffe3;
+}
+.sp-smul-list li:hover .icon-position,.sp-smul-list>li.visited .icon-position{
+    background-position: -30px -180px;
+}
+
+/*错误提示*/
+.sp-address-error{
+    position: absolute;
+    left: 90px;
+    font-size: 12px;
+    top: 30px;
+}
+.sp-error-left{
+    left: 10px;
+}
+.sp-error-left-md{
+    left: 50px;
+    top: 0 !important;
+}
+/*保存按钮区域 结构*/
+.sp-save-box{
+    margin-top: 20px;
+    text-align: center;
+}
+.sp-save-box .sp-btn{
+	margin: 0 5px;
+}
+
+/*三级城市联动样式调整*/
+.slt-box{
+	position: relative;
+	float: left;
+	z-index: 2;
+	width: 118px;
+	height: 28px;
+	background: #fff;
+	border: 1px solid #ddd;
+	margin: 0 5px 0 4px;
+	cursor: pointer;
+}
+.slt-box .slt{
+	width: 80px;
+	height: 28px;
+	line-height: 28px;
+	border: 0 none;
+	background: none;
+	padding: 0 25px 0 5px;
+	pointer-events: none;
+}
+.slt-box .tal-box{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 28px;
+	height: 28px;
+	overflow: hidden;
+	margin: 0;
+	cursor: pointer;
+}
+.slt-box .tal-box .tal{
+	display: inline-block;
+    width:9px;
+	height:5px;
+    overflow: hidden;
+    margin: 10px 0 0 7px;
+    font-size: 0;
+    line-height: 0;
+    background: url("../../image/common/icon_img.png") no-repeat -120px -150px;
+}
+.slt-box .tal-box .tal_spe{
+	background-position: -180px -150px;
+}
+.slt-box .slt-list{
+	display: none;
+	position: absolute;
+	top: 29px;
+	z-index: 9999;
+	width: 376px;
+	height: auto;
+	padding: 5px 0;
+	overflow: hidden;
+	background: #fff;
+	border: 1px solid #ddd;
+	border-top: 0;
+}
+.slt-box .slt-list li{
+	float: left;
+	width: 84px;
+	height: 30px;
+	line-height: 30px;
+	overflow: hidden;
+	text-align: left;
+	cursor: pointer;
+	text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 5px;
+}
+.slt-box .slt-list li:hover, .slt-box .slt-list li.selected{
+	background: #7bbe2b;
+	color: #fff;
+}
+#province .slt-list, #city .slt-list{
+	left: -1px;
+}
+#area .slt-list{
+	right: -1px;
+}
+
+/*****404页面样式*****/
+.sp-footer-box{
+    margin: 0;
+}
+.sp-error-cont{
+    width: 380px;
+    height: 140px;
+    overflow: hidden;
+    margin: 200px auto;
+    /*position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -70px 0 0 -190px;*/
+}
+.sp-error-box p{
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 24px;
+}
+.sp-error-box span, .sp-error-box a{
+    display: block;
+    float: left;
+}
+.sp-error-box .sp-btn{
+    width: 50px;
+    margin: 5px 0 0 20px;
+    text-align: center;
+}
+.sp-error-footer{
+    height: 120px;
+    overflow: hidden;
+}
+/*****清除百度地图水印*****/
+.BMap_cpyCtrl, .anchorBL{
+    display: none;
+}
+

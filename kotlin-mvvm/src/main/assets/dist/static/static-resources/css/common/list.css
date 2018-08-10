@@ -1,0 +1,261 @@
+﻿@CHARSET "UTF-8";
+
+/*
+* 列表 css样式
+*该样式用于 ul li 列表 多以列表内图片 标题 价格为主的商品展示列表
+*主要涉及 商品展示 列表 可调整宽高 列表内的图片大小 及文字颜色大小 对齐方式
+*该样式用于银犁食品B2C网站  主以sp-xx-yy名
+*该样式可添加多页面商品展示列表框架css 不可修改
+*/
+ul, ol, li {
+    list-style: none;
+}
+
+/*漂浮元素*/
+.sp-ul-float li,.ul-li-float-left li,.sp-list-div{
+    float: left;
+}
+/*列表内 li 漂浮*/
+.sp-ul-float li{
+    margin: 0 4px 0 0;
+    cursor: pointer;
+}
+.dis-inblock{
+    display: inline-block;
+}
+/*=========列表ul-li漂浮*/
+.ul-li-float-right li{
+    float:right;
+}
+/*========清除li默认样式====*/
+.ul-li-list-style{
+    list-style: none;
+}
+/*控制li 宽度 为200 不允许换行 */
+.sp-list-li-md li{
+    display: inline-block;
+    width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    *display:inline;
+    *zoom:1;
+}
+
+/*li中数字颜色*/
+.sp-list-number-color{
+    color: #38b;
+}
+
+/*========yangsiyu(2017-01-22)======*/
+/*购物车列表样式（奇偶列）*/
+.list:nth-of-type(2n+1){
+    border: 1px solid #ddd;
+}
+.list:nth-of-type(2n){
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-top:1px solid rgba(242, 242, 242, 0);
+    border-bottom:1px solid rgba(242, 242, 242, 0);
+}
+.list:last-child{
+    border-bottom: 1px solid #ddd;
+}
+/*=======最近浏览(推荐)START=====*/
+.Recent-count{
+    border: 1px solid #EAEAEA;
+    margin-top:5px;
+}
+.Recent-item{
+    width: calc(100% / 5);
+    padding:10px;
+    box-sizing: border-box;
+}
+.Recent-img img{
+    width: 100%;
+    height: 170px;
+}
+.Recent-intro{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    height: 33px;
+    overflow: hidden;
+}
+.Recent-btn{
+    margin-top: 10px;
+}
+.Recent-btn button{
+    font-family: "微软雅黑";    
+}
+.Recent-btn button:hover{
+    background: #ffc000;
+    color: white;
+    border:1px solid #ffc000;
+}
+/*=======最近浏览（购物车）END=====*/
+/*列表内容item样式START*/
+.item{
+    width:240px;
+    height: 380px;
+    padding:5px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border: 2px solid rgba(255, 0, 0, 0);
+}
+.item:hover{
+  -webkit-box-shadow:0 0 10px #afbbbb;  
+  -moz-box-shadow:0 0 10px #afbbbb;  
+  box-shadow:0 0 10px #afbbbb;  
+}
+.img_wrap ,img a ,.img_wrap img{
+    height: 220px;
+    width: 220px;
+}
+.img_wrap{
+    margin: 0 auto;
+    position: relative;
+}
+.img_wrap a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.sp-important-hide{
+    display: none !important;
+}
+.img_wrap .need{
+    margin-top:48px;
+    margin-left: 47px;
+    height: 122px;
+    width: 124px;
+    background: url(../../image/common/icon_bigimg.png);
+    background-position: -422px -25px;
+}
+.price{
+    line-height: 30px;
+}
+.intro{
+    height: 30px;
+    overflow: hidden;
+}
+.intro , .commdity{
+     padding-bottom: 15px;  
+}
+.hot{
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+.number{
+    padding:0 10px 0 25px;
+}
+.sp-deep-blue{
+    color: #045292;
+}
+/* 新增功能(对比等)样式调整 */
+.item-operation a{
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #ddd;
+    padding: 0 3px 0 27px;
+    position: relative;
+    background: #fff;
+    color: #999;
+}
+.concern,.shopCar{
+    margin-left:-1px;
+}
+.contrast{
+    width:24px;
+}
+.concern{
+    width:34px;
+}
+.shopCar{
+    width:66px;
+}
+.item-operation i{
+    display: block;
+    position: absolute;
+    left:6px;
+}
+.shopCar i{
+    width: 18px;
+    height: 16px;
+    background: url(../../image/list/car-default.png) no-repeat;
+    top:6px;
+}
+.contrast i{
+    width: 10px;
+    height: 10px;
+    /*background: url(../../image/list/compare-default.png) no-repeat;*/
+    border: 1px solid #ddd;
+    top:9px;
+}
+.concern i{
+    width: 14px;
+    height: 14px;
+    background: url(../../image/list/concern.png) no-repeat;
+    top:8px;
+}
+/* 点击后添加contrast-visited/concern-visited改变点击后样式 */
+.shopCar:hover,.contrast:hover,.concern:hover,.item-operation .contrast-visited,.item-operation .concern-visited{
+    color:#ffc000;
+}
+.shopCar:hover i{
+    background: url(../../image/list/car-clicked.png) no-repeat;
+}
+.contrast:hover i{
+    border-color: #ffc000;
+    width: 10px;
+    height: 10px;
+}
+.contrast-visited i{
+    background: url(../../image/list/compare.png) no-repeat;
+    width: 12px !important;
+    height: 12px !important;
+    border: none !important;
+}
+.concern:hover i,.concern-visited i{
+    background: url(../../image/list/concerned.png) no-repeat;
+}
+/*列表内容item样式END*/
+/*=========xumin 右侧浏览(推荐)样式 (商品详情页)============*/
+
+/*****布局START*********/
+.sp-aside-list li{
+    margin-bottom: 20px;
+}
+.sp-list-price,.sp-list-word,.compare-delete{
+    padding: 0 10px;
+}
+.sp-list-img{
+    padding: 10px 9px;
+}
+.sp-list-img img{
+    width: 220px;
+    height: 220px;
+}
+.sp-list-price{
+    font-weight: bold;
+    font-size: 16px;
+    color: #Ff4e00;
+    height: 30px;
+    line-height: 30px;
+}
+.sp-list-word{
+    height: 40px;
+    overflow: hidden;
+}
+.info-item{
+    overflow: hidden;
+}
+.info-item:hover{
+    cursor: pointer;
+   
+}
+.stock .info-item:hover ,.modal .less_stock .info-item:hover{
+    border: 1px solid #F0F0EE !important;
+    background: #fff8e3;
+}

@@ -3,6 +3,9 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 group='com.github.fanson1'
 
+// apectjx模块
+apply plugin: 'android-aspectjx'
+
 
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
@@ -47,6 +50,11 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
     // 解决DuplicateFileException问题
     packagingOptions {
         pickFirst 'META-INF/*'
@@ -81,6 +89,9 @@ dependencies {
     compile rootProject.ext.dependencies["rradapter"]
     // RxPermissions
     compile rootProject.ext.dependencies["rxpermissions"]
+    // lifecycle
+    compile rootProject.ext.dependencies["lifecycle-extensions"]
+    compile rootProject.ext.dependencies["lifecycle-compiler"]
     // 支持Gson解析
     compile rootProject.ext.dependencies["converter-gson"]
     compile rootProject.ext.dependencies["gson"]
@@ -101,4 +112,10 @@ dependencies {
     compile files('libs/pinyin4j-2.5.0.jar')
     // 状态工具
     compile rootProject.ext.dependencies["statusbarutil"]
+
+    // aspect
+    compile rootProject.ext.dependencies["aspectjrt"]
+
+    // constraint
+    compile rootProject.ext.dependencies["constraint"]
 }

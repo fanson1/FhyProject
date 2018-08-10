@@ -35,6 +35,21 @@ class UseKotlin {
 //        testCopy()
 
 //        testSealted()
+//        testOverload(test)
+//        test.testThread()
+        test.testMap()
+        test.name
+        test.name
+
+        var map = HashMap<String, String>()
+        map["name"] = "张三"
+        map["sex"] = "男"
+    }
+
+    private fun testOverload(test: Test) {
+        test.testOverload("打印一句话：Hello，world 1", true)
+        test.testOverload("打印一句话：Hello，world 2", false)
+        test.testOverload("打印一句话：Hello，world 3")
     }
 
     /**

@@ -1,0 +1,171 @@
+@charset "UTF-8";
+/**
+ * @describer 公司介绍板块
+ * @author xumin
+ * @time 2017-4-13
+ */
+.sp-help-cont{
+	min-height: 500px;
+}
+.sp-help-cont .sp-help-col{
+	display: none;
+}
+.sp-help-cont .sp-help-col.default{
+	display: block;
+}
+.sp-company-content,.sp-contact-content,.sp-public-number,.sp-cooperation-content{
+    padding: 20px 10px 40px;
+}
+.sp-company-content p{
+    line-height: 20px;
+    text-indent: 20px;
+}
+.sp-company-img{
+    margin-top: 20px;
+}
+.contact-item{
+    margin-bottom: 30px;
+}
+.contact-item p,.cooperation-item p{
+    line-height: 20px;
+}
+/*******去边框********/
+.sp-border-left-none{
+	border-left:none;
+}
+
+/*新手指南--START（yangsiyu）*/
+.help_title{
+    padding: 5px 10px;
+}
+.help_intro{
+    padding:10px 0;
+}
+.help_img{
+    margin: 0 0 10px 0;
+}
+/*购物流程*/
+.help_step{
+    margin-top: 10px;
+}
+.help_cunt{
+    margin:20px 0 0 0;
+}
+ /*新手指南--END*/
+
+/*****支付方式*****/
+.sp-pay-ways p, .sp-send-ways p{
+	color: #333;
+	margin-bottom: 10px;
+}
+.sp-pay-ways .sp-help-total{
+	margin: 20px 0 10px 0;
+}
+.sp-pay-ways h1, .sp-send-ways h1{
+	height: 30px;
+	line-height: 30px;
+	padding-left: 10px;
+	background: #f1f1f1;
+	margin: 0 0 20px 0;
+}
+.sp-pay-ways .sp-help-explain{
+	margin-left: 55px;
+}
+.sp-pay-ways img{
+	margin-bottom: 30px;
+}
+
+/*****配送方式*****/
+.sp-send-ways h1{
+	margin: 30px 0 15px 0;
+}
+.sp-send-ways .sp-send-spe{
+	margin-top: 20px;
+}
+
+/*********售后**********/
+.sp-help-cont{
+    margin-left: 0;
+}
+.exchange-cont{
+    width:100%;
+    overflow: hidden;
+    margin-top: 10px;
+}
+.policy{
+    width:100%;
+    height:30px;
+    overflow: hidden;
+    margin-top: 20px;
+    line-height: 30px;
+    background: #f1f1f1;
+    font-size: 0;
+}
+.policy span{
+    display: inline-block;
+    color:#585757;
+    padding-left: 12px;
+}
+.exchange-cont p{
+    font-size: 12px;
+    line-height:20px;
+    color:#333;
+    margin-top: 5px;
+}
+.exchange-cont p.gray-color{
+    color:#999;
+}
+.list-num{
+    display: inline-block;
+    width:13px;
+    height:13px;
+    border:1px solid #333;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    text-align: center;
+    line-height: 13px;
+    margin-right: 6px;
+}
+.exchange-cont p.statement{
+    margin-top: 36px;
+}
+.exchange-cont p.prompt{
+    margin-top: 23px;
+}
+.exchange-process{
+    display: block;
+    width:803px;
+    height:238px;
+    margin-top: 20px;
+}
+.problem-head{
+    color:#333;
+    margin-top: 20px;
+}
+.problem-list{
+    width:100%;
+    overflow: hidden;
+}
+.problem-list li{
+    list-style-type:disc;
+    list-style-position:outside;
+    font-size: 12px;
+    color:#333;
+    margin-top: 10px;
+}
+.problem-list li span{
+    padding-right: 5px;
+    font-weight: bold;
+}
+.complaint-tel{
+    width:100%;
+    overflow: hidden;
+    margin-top: 10px;
+    color:#333;
+    font-size: 12px;
+}
+.complaint-tel span{
+    font-weight: bold;
+}
+.sp-help-cont{ padding: 4px 5px}

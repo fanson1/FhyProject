@@ -4,6 +4,7 @@ import android.view.View
 import com.base.demo.R
 import com.base.demo.bean.UserBean
 import com.base.demo.databinding.ActivityLoginBinding
+import com.base.demo.test.UseKotlin
 import com.base.ui.BaseActivity
 
 class LoginActivity : BaseActivity() {
@@ -29,6 +30,8 @@ class LoginActivity : BaseActivity() {
         var userBean = UserBean()
         loginBinding?.userBean = userBean
         loginBinding?.loginHandler = LoginHandler(this)
+
+        UseKotlin().start()
     }
 
     override fun initData() {

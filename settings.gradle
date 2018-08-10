@@ -1,3 +1,3 @@
-include ':mvvm', ':baselibs', ':kotlin-mvvm'
+include ':mvvm', ':baselibs', ':kotlin-mvvm', ':textviewdemo'
 
 

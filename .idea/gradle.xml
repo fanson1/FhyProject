@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$/baselibs" />
             <option value="$PROJECT_DIR$/kotlin-mvvm" />
             <option value="$PROJECT_DIR$/mvvm" />
+            <option value="$PROJECT_DIR$/textviewdemo" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

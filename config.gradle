@@ -50,6 +50,8 @@ ext {
             "rradapter"           : "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0",
             "converter-gson"      : "com.squareup.retrofit2:converter-gson:2.1.0",
             "rxpermissions"       : "com.tbruyelle.rxpermissions:rxpermissions:0.9.4",
+            "lifecycle-extensions": "android.arch.lifecycle:extensions:1.1.1",
+            "lifecycle-compiler"  : "android.arch.lifecycle:compiler:1.1.1",
 
             // Greendao
             "greendao"            : "org.greenrobot:greendao:3.0.1",
@@ -59,6 +61,9 @@ ext {
             "md-dialog-commons"   : "com.afollestad.material-dialogs:commons:0.9.4.3",
             "md-dialog-core"      : "com.afollestad.material-dialogs:core:0.9.4.3",
             "statusbarutil"       : "com.jaeger.statusbarutil:library:1.4.0",
+
+            // aspect
+            "aspectjrt"           : "org.aspectj:aspectjrt:1.8.9",
 
             // Other
             "nineoldandroids"     : "com.nineoldandroids:library:2.4.0",

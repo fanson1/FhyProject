@@ -1,0 +1,301 @@
+﻿@charset "utf-8";
+/*
+* 表格 css样式
+*该样式用于 涉及表格页面的布局
+*主要涉及 表格大布局 宽 高 调整
+*该样式用于银犁食品B2C网站  主以sp-xx-yy名
+*该样式可添加通用table框架css 不可修改
+*/
+table{
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	border: 1px solid #ddd;
+	background: #fff;
+}
+.sp-table-box{
+	margin: 0 10px 10px 10px;
+}
+.sp-size-table{
+	padding:10px 10px 20px 10px;
+}
+.sp-table-box .sp-tr-height:hover,
+.sp-detail-table .sp-tr-height:hover,
+.sp-table-box .sp-tr-height:hover .sp-img-list-other{
+	background: #fff8e3;
+	cursor: pointer;
+}
+.sp-table-box td{
+	padding:10px 7px 10px 0;
+}
+.sp-md-table-box td{
+	padding: 10px 15px;
+	box-sizing: border-box;
+}
+.sp-gary-table td{
+	border: 1px solid #ddd;
+}
+.sp-table-gary-fre td{
+	border: 1px solid #ddd;
+	line-height: 30px;
+}
+
+/*****列表页table*****/
+.sp-green-table{
+	border:1px solid #7BBE2D;
+}
+.sp-green-table td{
+	border-bottom:1px solid #7BBE2D;
+}
+.sp-gry-table td {
+	border-bottom: 1px solid #EBEBE9;
+}
+.sp-mb-0{
+	margin-bottom: 0;
+}
+.sp-tr-height{
+	height: 100px;
+}
+.sp-mb-top{
+	margin-top:10px;
+}
+.sp-lg-top{
+	margin-top:20px;
+}
+/*****td长度*****/
+.sp-col-xxs{
+	width: 20px;
+}
+.sp-col-xxm{
+	width: 40px;
+}
+.sp-col-xsm{
+	width: 60px;
+}
+.sp-col-sm{
+	width: 70px;
+}
+.sp-col-mid{
+	width: 80px;
+}
+.sp-col-md{
+	width: 95px;
+}
+.sp-col-lg{
+	width: 110px;
+}
+.sp-col-xl{
+	width: 125px;
+}
+.sp-col-slg{
+	width: 176px;
+}
+.sp-col-xlg{
+	width: 225px;
+}
+.sp-col-xs{
+	width: 175px;
+}
+.sp-col-xxl{
+	width: 380px;
+}
+.sp-col-xxxl{
+	width: 400px;
+}
+.sp-col-xxlg{
+	width: 510px;
+}
+/*****背景*****/
+.sp-table-bg{
+	background: #f2f2f2;
+}
+.sp-td-bg{
+	background: #f1f1f1;
+}
+.sp-td-bg-gray-fre{
+	background: #f6f6f6;
+}
+.sp-td-green-bg{
+	background: #efffdb;
+}
+.sp-td-gray-bg{
+    background: #eee;
+    /*color: #666;*/
+}
+/*****对齐方式*****/
+.sp-td-top{
+	vertical-align: top;
+}
+.sp-td-left{
+	text-align: left;
+}
+.sp-td-center{
+	text-align: center;
+}
+/*th 加粗显示*/
+.sp-th-weight th{
+	font-weight: 700;
+}
+/*th 左对齐*/
+.sp-th-left th{
+	text-align: left;
+}
+/*tr 高度控制*/
+.sp-tr-tab tr{
+	height: 30px;
+	line-height: 30px;
+}
+/*订单详情table控制*/
+.sp-detail-table td{
+	vertical-align: top;
+	padding: 10px;
+}
+
+/*****订单列表table公共样式*****/
+.sp-table-box img,.sp-detail-table img{
+	width: 80px;
+	height: 80px;
+	vertical-align: middle;
+}
+.sp-icon-down{
+	background-position: -120px -150px;
+	margin: 10px 0 0 10px;
+}
+.sp-icon-down.current{
+	background-position: -180px -150px;
+}
+.sp-table-box .sp-tr-tips{
+	height: 30px;
+	line-height: 30px;
+}
+.sp-table-box .sp-tr-tips td{
+	padding: 0 10px;
+}
+.sp-md-table-box td {
+	padding: 3px;
+	box-sizing: border-box;
+}
+.sp-md-table-box td:first-child {
+	padding: 3px 10px 3px 26px;
+	box-sizing: border-box;
+}
+.sp-table-box .sp-tr-tips p{
+	margin-left: 35px;
+}
+.sp-table-box .sp-img-list{
+	height: 82px;
+	margin-left: 10px;
+}
+.sp-img-list .sp-goods-name{
+	width: 260px;
+	border: 0;
+	margin: 0;
+}
+.sp-img-list .sp-goods-name:hover{
+	color: #ffc000;
+	text-decoration: underline;
+}
+.sp-img-list a{
+	display: inline-block;
+	float: left;
+	width: 80px;
+	height: 80px;
+	margin: 0 5px 0 0;
+	border: 1px solid #ddd;
+	position: relative;
+}
+.sp-img-list a i{
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: inline-block;
+	width: 30px;
+	height: 18px;
+	line-height: 18px;
+	text-align: center;
+	background: #ffc000;
+}
+.sp-img-list a i.sp-hide{
+	display: none;
+}
+.sp-img-list a span{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	display: inline-block;
+}
+.sp-click{
+	width: 70px;
+	height: 100px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99;
+}
+.sp-tools a{
+	display: block;
+}
+.sp-tools .sp-btn{
+	width: 50px;
+	height: 26px;
+	line-height: 26px;
+	font-weight: bold;
+	margin: auto;
+}
+.sp-time{
+	color: red;
+}
+/*退换货*/
+.change-tab{
+	border: 1px solid #f1f1f1;
+}
+.change-tab thead td{
+	padding:7px 0;
+}
+.change-tab td:first-child{
+	padding-left: 10px;
+}
+.sp-order-list{
+	padding:5px;
+}
+.check-look a{
+	color:dodgerblue;
+}
+/* 商品对比表样式 */
+.compare-table,.compare-table1{
+	width: auto;
+}
+.compare-table1{
+	margin-top: -1px;
+}
+.compare-table .compare-title,.compare-table1 .compare-title{
+	width:108px;
+}
+.compare-table .compare-goods,.compare-table1 .compare-goods{
+	width:240px;
+}
+.compare-table tr,.compare-table th,.compare-table td,.compare-table1 tr,.compare-table1 th,.compare-table1 td{
+	border:1px solid #ddd;
+}
+.compare-table td{
+	padding:20px 0;
+	text-align: center;
+}
+.compare-add:hover{
+	color: #ffc000;
+}
+.compare-table1 td{
+	padding:20px 10px;
+}
+.compare-table th,.compare-table1 th{
+	text-align:right;
+	padding: 20px 10px 20px 0;
+}
+.check-hide{
+	margin-right:10px;
+}
+.compare-delete{
+	height: 30px;
+	margin-top: 20px;
+	line-height: 30px;
+}
