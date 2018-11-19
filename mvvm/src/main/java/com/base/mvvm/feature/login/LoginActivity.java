@@ -2,7 +2,6 @@ package com.base.mvvm.feature.login;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.test.espresso.idling.CountingIdlingResource;
 import android.support.v7.app.AppCompatActivity;
 
 import com.base.mvvm.R;
@@ -20,7 +19,6 @@ import com.base.mvvm.util.PrefrenceUtil;
 
 public class LoginActivity extends AppCompatActivity {
     private ActivityLoginBinding binding;
-    public static CountingIdlingResource sIdlingResource=new CountingIdlingResource("LoginActivity");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

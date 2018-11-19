@@ -2,12 +2,17 @@ package com.base.ui.mvvm.view;
 
 import android.arch.lifecycle.LifecycleRegistry;
 import android.arch.lifecycle.LifecycleRegistryOwner;
+import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProvider;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 
+import com.base.R;
 import com.base.ui.BaseActivity;
 import com.base.ui.mvvm.viewmodel.BaseVModel;
+import com.base.util.dialog.ProgressUtil;
+import com.base.util.hint.ToastUtil;
 
 /**
  * 描述: MVVM框架下View层Activity基类
@@ -34,36 +39,49 @@ public abstract class BaseMVVMActivity<VM extends BaseVModel> extends BaseActivi
     protected void setViewModel(VM viewModel) {
         this.mVModel = viewModel;
         if (mVModel == null) return;
-        mVModel.mLoginExpiresCommand.observe(this, aVoid -> showLoginDialog());
-        mVModel.mLoadingCommand.observe(this, aVoid -> showLoading());
-        mVModel.mLoadingCompleteCommand.observe(this, aVoid -> completeLoading());
-        mVModel.mSuccessCommand.observe(this, msg -> toastSuccess((String) msg));
-        mVModel.mFailCommand.observe(this, msg -> toastFail((String) msg));
-        mVModel.mFailIdCommand.observe(this, resId -> toastFail(((Integer) resId).intValue()));
-        mVModel.mNomalToastCommand.observe(this, msg -> toastNomal((String) msg));
-        mVModel.mNoNetToastCommand.observe(this, aVoid -> toastNomal(getString(0)));
+        mVModel.mLoginExpiresCommand.observe(this, new Observer() {
+            @Override
+            public void onChanged(@Nullable Object o) {
+                showLoginDialog();
+            }
+        });
+        mVModel.mLoadingCommand.observe(this, new Observer() {
+            @Override
+            public void onChanged(@Nullable Object o) {
+                ProgressUtil.showPregress(BaseMVVMActivity.this);
+            }
+        });
+        mVModel.mLoadingCompleteCommand.observe(this, new Observer() {
+            @Override
+            public void onChanged(@Nullable Object o) {
+                ProgressUtil.dissmissProgress();
+            }
+        });
+        mVModel.mSuccessCommand.observe(this, new Observer() {
+            @Override
+            public void onChanged(@Nullable Object o) {
+                ToastUtil.showDoSuccessToast();
+            }
+        });
+        mVModel.mFailCommand.observe(this, new Observer() {
+            @Override
+            public void onChanged(@Nullable Object o) {
+                ToastUtil.showDoFailtureToast();
+            }
+        });
+        mVModel.mNomalToastCommand.observe(this, new Observer() {
+            @Override
+            public void onChanged(@Nullable Object o) {
+                ToastUtil.showToastMessage(o.toString());
+            }
+        });
+        mVModel.mNoNetToastCommand.observe(this, new Observer() {
+            @Override
+            public void onChanged(@Nullable Object o) {
+                ToastUtil.showToastMessage(getString(R.string.toast_bad_net));
+            }
+        });
     }
-
-    /**
-     *
-     * 以下方法在项目中实现即可，无需在lib中实现
-     */
-
-    protected abstract void toastSuccess(String msg);
-
-    protected abstract void toastFail(String msg);
-
-    protected abstract void toastFail(int strId);
-
-    protected abstract void toastNomal(String msg);
-
-    protected abstract void showLoading(String msg);
-
-    protected abstract void showLoading();
-
-    protected abstract void completeLoading();
-
-    protected abstract void showDialog(String title, String sure, String cancle);
 
     /**
      * 弹出登录提示对话框

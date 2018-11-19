@@ -22,8 +22,8 @@ android {
         versionName "1.0.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
     }
+
     buildTypes {
         release {
             // 是否进行混淆
@@ -38,7 +38,6 @@ android {
             signingConfig signingConfigs.debug
             proguardFiles 'proguard-rules.pro'
         }
-
     }
 
     signingConfigs {
@@ -48,11 +47,6 @@ android {
             keyAlias ""
             keyPassword ""
         }
-    }
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
     }
 
     // 解决DuplicateFileException问题
@@ -91,7 +85,7 @@ dependencies {
     compile rootProject.ext.dependencies["rxpermissions"]
     // lifecycle
     compile rootProject.ext.dependencies["lifecycle-extensions"]
-    compile rootProject.ext.dependencies["lifecycle-compiler"]
+    annotationProcessor rootProject.ext.dependencies["lifecycle-compiler"]
     // 支持Gson解析
     compile rootProject.ext.dependencies["converter-gson"]
     compile rootProject.ext.dependencies["gson"]

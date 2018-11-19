@@ -23,6 +23,8 @@ android {
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
+        //添加如下配置，解决：Annotation processors must be explicitly declared now....
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
     }
     buildTypes {
         release {
@@ -33,15 +35,5 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile rootProject.ext.dependencies["constraint"]
     compile project(':baselibs')
-
-    // Test
-    compile rootProject.ext.dependencies["junit"]
-    compile rootProject.ext.dependencies["espresso-idling"]
-    androidTestCompile(rootProject.ext.dependencies["espresso"], {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    compile rootProject.ext.dependencies["constraint"]
 }

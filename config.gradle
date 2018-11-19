@@ -1,10 +1,10 @@
-def supportVersion = "26.0.2"
+def supportVersion = "27.0.2"
 
 ext {
-    android = [compileSdkVersion: 26,
+    android = [compileSdkVersion: 27,
                buildToolsVersion: "${supportVersion}",
                minSdkVersion    : 15,
-               targetSdkVersion : 26]
+               targetSdkVersion : 27]
     dependencies = [
             // Support
             "support-v4"          : "com.android.support:support-v4:${supportVersion}",

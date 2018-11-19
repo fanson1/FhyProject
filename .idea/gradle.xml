@@ -9,9 +9,13 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/baselibs" />
+            <option value="$PROJECT_DIR$/java-mvvm" />
             <option value="$PROJECT_DIR$/kotlin-mvvm" />
             <option value="$PROJECT_DIR$/mvvm" />
-            <option value="$PROJECT_DIR$/textviewdemo" />
+            <option value="$PROJECT_DIR$/xposeddemo" />
+            <option value="$PROJECT_DIR$/xposedmoudle" />
+            <option value="$PROJECT_DIR$/xposedplugin" />
+            <option value="$PROJECT_DIR$/xposedtest" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

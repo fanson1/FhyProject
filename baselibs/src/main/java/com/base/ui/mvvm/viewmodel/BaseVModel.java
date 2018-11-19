@@ -30,8 +30,6 @@ public class BaseVModel<M extends IModel> extends AndroidViewModel implements Li
     public final SingleLiveData<String> mSuccessCommand = new SingleLiveData<>();
     //失败返回提示
     public final SingleLiveData<String> mFailCommand = new SingleLiveData<>();
-    //失败返回提示
-    public final SingleLiveData<Integer> mFailIdCommand = new SingleLiveData<>();
     //toast提示
     public final SingleLiveData<String> mNomalToastCommand = new SingleLiveData<>();
     //toast无网提示

@@ -12,9 +12,8 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 
-import com.base.R;
-import com.base.util.common.DisplayUtil;
 import com.base.util.app.AppManager;
+import com.base.util.common.DisplayUtil;
 import com.jaeger.library.StatusBarUtil;
 
 /**

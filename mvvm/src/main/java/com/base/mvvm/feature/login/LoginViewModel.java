@@ -29,7 +29,6 @@ public class LoginViewModel {
     }
 
     public void login(UserBean userBean) {
-        LoginActivity.sIdlingResource.increment();//App 开始进入忙碌状态 ，等待通知
         model.login(userBean);
     }
 
@@ -45,12 +44,12 @@ public class LoginViewModel {
             binding.tvUserWelcome.setVisibility(View.VISIBLE);
             Context context = binding.tvUserWelcome.getContext();
             context.startActivity(new Intent(context, OrderListActivity.class));
+            ((Activity)context).finish();
         } else {// 登陆失败
             binding.edtUserName.setText("");
             binding.edtUserPwd.setText("");
             binding.tvUserWelcome.setText("");
             binding.tvUserWelcome.setVisibility(View.GONE);
         }
-        LoginActivity.sIdlingResource.decrement();//加载完毕后，将App设置成空闲状态
     }
 }

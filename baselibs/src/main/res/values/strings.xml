@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">baselibs</string>
+
+    <string name="toast_operation_success">操作成功！</string>
+    <string name="toast_operation_failure">操作失败！</string>
+    <string name="toast_operation_result">操作结果！</string>
+    <string name="toast_bad_net">网络信息差，请稍后重试</string>
 </resources>
